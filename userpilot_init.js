@@ -25,6 +25,6 @@ window.addEventListener('hashchange', (event) => {
 	    userpilot.reload();
     /*userpilot.track("Page navigation", {
         url: event.newURL.replace(window.location.origin,'')        
-      });            
-    }*/
+      });  */          
+    }
   }, false);
