@@ -22,8 +22,9 @@ async function identifyUser(){
 
 window.addEventListener('hashchange', (event) => {    
     if(checkAppObject()){
-    userpilot.track("Page navigation", {
+	    userpilot.reload();
+    /*userpilot.track("Page navigation", {
         url: event.newURL.replace(window.location.origin,'')        
       });            
-    }
+    }*/
   }, false);
