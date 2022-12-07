@@ -19,7 +19,7 @@ async function identifyUser(){
   await identifyUser();    
 })();
 
-addCustomEventListener: function (selector, event, handler) {
+function addCustomEventListener(selector, event, handler) {
         let rootElement = document.querySelector('body');
         //since the root element is set to be body for our current dealings
         rootElement.addEventListener(event, function (evt) {
