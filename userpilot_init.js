@@ -18,12 +18,30 @@ async function identifyUser(){
 (async() => {
   await identifyUser();    
 })();
+
+addCustomEventListener: function (selector, event, handler) {
+        let rootElement = document.querySelector('body');
+        //since the root element is set to be body for our current dealings
+        rootElement.addEventListener(event, function (evt) {
+                var targetElement = evt.target;
+                while (targetElement != null) {
+                    if (targetElement.matches(selector)) {
+                        handler(evt);
+                        return;
+                    }
+                    targetElement = targetElement.parentElement;
+                }
+            },
+            true
+        );
+    }
 window.addEventListener("load", (event) => {
-  document.querySelectorAll('[role="tab"]').forEach(function(a) {
+addCustomEventListener('[role="tab"]','click', (ev)=>{	
+    let a = ev.target;
     let url = window.location.hash.split('?')[0];
-    console.log(url);
-    a.addEventListener('click', ()=>{history.replaceState(undefined, undefined, url+'?'+a.innerText)});
+	history.replaceState(undefined, undefined, url+'?'+a.innerText);	
 });
+  
 });
 
 window.addEventListener('hashchange', (event) => {    
