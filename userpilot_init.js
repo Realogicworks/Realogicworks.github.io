@@ -40,6 +40,7 @@ addCustomEventListener('[role="tab"]','click', (ev)=>{
     let a = ev.target;
     let url = window.location.hash.split('?')[0];
 	history.replaceState(undefined, undefined, url+'?'+a.innerText);	
+	userpilot.reload();
 });
   
 });
