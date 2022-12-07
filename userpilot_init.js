@@ -18,7 +18,13 @@ async function identifyUser(){
 (async() => {
   await identifyUser();    
 })();
-
+window.addEventListener("load", (event) => {
+  document.querySelectorAll('[role="tab"]').forEach(function(a) {
+    let url = window.location.hash.split('?')[0];
+    console.log(url);
+    a.addEventListener('click', ()=>{history.replaceState(undefined, undefined, url+'?'+a.innerText)});
+});
+});
 
 window.addEventListener('hashchange', (event) => {    
     if(checkAppObject()){
