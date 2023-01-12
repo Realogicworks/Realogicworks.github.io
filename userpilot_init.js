@@ -1,3 +1,6 @@
+function generateReport(){
+	window.location.href = "http://localhost:4200/report/"+window.location.hash.split(';')[1];
+}
 function checkAppObject(){
 	if(window.MyApp && window.userpilot && window.MyApp.loginUserData)
 		return true;
