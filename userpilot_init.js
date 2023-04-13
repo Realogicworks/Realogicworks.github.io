@@ -17,7 +17,7 @@ async function identifyUser(){
 	}
 	userpilot.identify(MyApp.loginUserData.Email,{
 		email: MyApp.loginUserData.Email,
-		roles: MyApp.loginUserData.UserJobRoles.map(c => c.JobRoleNavID),
+		userRoles: MyApp.loginUserData.UserJobRoles.map(c => c.JobRoleNavID),
 		job: MyApp.loginUserData.Resource.Job,
 		jobTitle: MyApp.loginUserData.Resource.JobTitle.
 		fullName: MyApp.loginUserData.Name
