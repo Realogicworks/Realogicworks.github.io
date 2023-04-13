@@ -20,7 +20,7 @@ async function identifyUser(){
 		roles: MyApp.loginUserData.UserJobRoles.map(c => c.JobRoleNavID),
 		userRoles: MyApp.loginUserData.UserJobRoles ? MyApp.loginUserData.UserJobRoles.map(c => c.JobRoleNavID).toString(',') : '',
 		job: MyApp.loginUserData.Resource.Job,
-		jobTitle: MyApp.loginUserData.Resource.JobTitle.
+		jobTitle: MyApp.loginUserData.Resource.JobTitle,
 		fullName: MyApp.loginUserData.Name
 	});
 }
