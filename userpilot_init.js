@@ -15,7 +15,13 @@ async function identifyUser(){
 	while(!checkAppObject()){
 		await timeout(500);
 	}
-	userpilot.identify(MyApp.loginUserData.Email,{email: MyApp.loginUserData.Email});
+	userpilot.identify(MyApp.loginUserData.Email,{
+		email: MyApp.loginUserData.Email,
+		roles: MyApp.loginUserData.UserJobRoles.map(c => c.JobRoleNavID),
+		job: MyApp.loginUserData.Resource.Job,
+		jobTitle: MyApp.loginUserData.Resource.JobTitle.
+		fullName: MyApp.loginUserData.Name
+	});
 }
 
 (async() => {
