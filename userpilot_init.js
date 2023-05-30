@@ -30,7 +30,7 @@ async function identifyUser(){
 })();
 
 function addCustomEventListener(selector, event, handler) {
-      /*  let rootElement = document.querySelector('body');
+        let rootElement = document.querySelector('body');
         //since the root element is set to be body for our current dealings
         rootElement.addEventListener(event, function (evt) {
                 var targetElement = evt.target;
@@ -43,7 +43,7 @@ function addCustomEventListener(selector, event, handler) {
                 }
             },
             true
-        );*/
+        );
     }
 window.addEventListener("load", (event) => {
 addCustomEventListener('[role="tab"]','click', (ev)=>{	
